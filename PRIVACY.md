@@ -35,6 +35,16 @@ Unify Notch — приложение для Windows, которое работа
 
 Использование данных, полученных через API Google, соответствует [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), включая требования Limited Use.
 
+## Расширение для браузера «Unify Пароли»
+
+Расширение для Chrome, Edge, Firefox и других браузеров подставляет логины, пароли и коды 2FA из Unify Notch на вашем компьютере.
+
+- Расширение общается только с программой Unify Notch на этом же компьютере (native messaging). Своих серверов у расширения нет; оно ничего не отправляет разработчику или третьим лицам и не содержит аналитики и рекламы.
+- Чтобы найти записи сайта, расширение передаёт Unify адрес открытой страницы. Логины и пароли расширение получает от Unify только для подстановки в выбранную вами форму и нигде их не хранит.
+- После входа или регистрации на сайте расширение передаёт Unify введённые логин и пароль, чтобы спросить «Сохранить пароль?». Без вашего «Сохранить» они не записываются и через 10 минут забываются.
+- Расширение хранит в браузере только служебные данные: ключ подключения к Unify, последнюю использованную запись для сайта (её идентификатор, не пароль) и на несколько минут — запись, выбранную на первом шаге входа.
+- Расширение может выключить встроенное сохранение паролей браузера; это можно вернуть флажком в окне расширения.
+
 ## Связь
 
 Вопросы и запросы — через [Issues этого репозитория](https://github.com/NeilMooreQ/UnifyNotch/issues).
@@ -75,6 +85,16 @@ A password database can be kept on your own server (WebDAV, SFTP) or in Google D
 - Removing the database from Unify's list deletes its stored token. You can also revoke access with the provider: [Google](https://myaccount.google.com/permissions), [Microsoft](https://account.live.com/consent/Manage), [Dropbox](https://www.dropbox.com/account/connected_apps).
 
 Unify Notch's use and transfer of information received from Google APIs adheres to the [Google API Services User Data Policy](https://developers.google.com/terms/api-services-user-data-policy), including the Limited Use requirements.
+
+## The "Unify Passwords" browser extension
+
+The extension for Chrome, Edge, Firefox and other browsers fills in sign-ins, passwords and 2FA codes from Unify Notch on your computer.
+
+- The extension talks only to the Unify Notch app on the same computer (native messaging). It has no servers of its own; it sends nothing to the developer or any third party and has no analytics or ads.
+- To find a site's entries, the extension gives Unify the address of the open page. It receives sign-ins and passwords from Unify only to fill the form you chose and stores them nowhere.
+- After you sign in or sign up on a site, the extension gives Unify the sign-in and password you entered, to ask "Save password?". Nothing is saved without your "Save", and the offer is forgotten after 10 minutes.
+- The extension keeps only service data in the browser: the key that pairs it with Unify, the entry last used on a site (its identifier, not the password) and, for a few minutes, the entry chosen on the first step of a sign-in.
+- The extension may turn off the browser's own password saving; a checkbox in the extension's window turns it back on.
 
 ## Contact
 
